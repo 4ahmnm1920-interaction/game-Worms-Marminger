@@ -11,12 +11,12 @@ public class WormsController : MonoBehaviour
     public float jumpforce;
     public float moveRight;
     public float moveLeft;
+    public Transform Spawnpoint;
 
    
 
 
     public KeyCode ShootKey;
-    public KeyCode ShootKey2;
     public KeyCode JumpKey;
     public KeyCode RightKey;
     public KeyCode LeftKey;
@@ -37,7 +37,7 @@ public class WormsController : MonoBehaviour
         
             Vector3 force = new Vector3(0,jumpforce,0);
             rb.AddForce(force);
-            Debug.Log("Taste ist gedrückt!");
+            //Debug.Log("Taste ist gedrückt!");
 
         }
 
@@ -45,41 +45,30 @@ public class WormsController : MonoBehaviour
         {
 
             Vector3 For = new Vector3(moveRight, 0, 0);
-
             rb.AddForce(For);
-            Debug.Log("Taste ist gedrückt!");
+            Debug.Log("RightKey ist gedrückt!");
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (Input.GetKey(LeftKey))
         {
 
             Vector3 Back = new Vector3(- moveLeft, 0, 0);
-
             rb.AddForce(Back);
-            Debug.Log("Taste ist gedrückt!");
+            Debug.Log("LeftKey ist gedrückt!");
+            transform.eulerAngles = new Vector3(0, 180, 0);
+
         }
 
 
         if (Input.GetKeyDown(ShootKey))
         {
             Rigidbody clone;
-            Vector3 Shoot = new Vector3(0.5f, 0.5f, 0f);
-            clone = Instantiate(projectile, transform.position + Shoot, transform.rotation);
-            clone.velocity = transform.TransformDirection(ammospeed, 0, 0);
-            Vector3 kraft = new Vector3(ammospeed, 0, 0);
-            rb.AddForce(kraft);
+            clone = Instantiate(projectile, Spawnpoint.position, transform.rotation);
+            Vector3 kraft = this.transform.right * ammospeed;
+            clone.AddForce(kraft);
         }
 
-        if (Input.GetKeyDown(ShootKey2))
-        {
-            Rigidbody clone;
-            Vector3 Shoot = new Vector3(0.5f, 0.5f, 0f);
-            clone = Instantiate(projectile, transform.position + Shoot, transform.rotation);
-            clone.velocity = transform.TransformDirection(ammospeed, 0, 0);
-            Vector3 kraft = new Vector3(ammospeed, 0, 0);
-            rb.AddForce(kraft);
-        }
-
-
+        
     }
 }

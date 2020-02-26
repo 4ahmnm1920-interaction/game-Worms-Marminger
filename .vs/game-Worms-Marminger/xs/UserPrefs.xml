@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{3682F6C6-FC40-11CD-98E3-10E6A238C34A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WormsController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/WormsController.cs" Line="75" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
