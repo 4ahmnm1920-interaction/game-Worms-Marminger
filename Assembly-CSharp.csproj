@@ -55,6 +55,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\PickUpScript.cs" />
+     <Compile Include="Assets\Scripts\PickUpSpawner.cs" />
      <Compile Include="Assets\Scripts\WormsController.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/Repos/game-Worms-Marminger/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
